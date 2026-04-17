@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="es" class="scroll-smooth">
+<html lang="gl" class="scroll-smooth">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -34,20 +34,23 @@
                 <div class="flex items-center">
                     <div class="hidden md:flex items-center space-x-6 mr-6">
                         <a href="#experience" class="text-sm text-slate-300 hover:text-white transition-colors font-medium">
-                            <span class="lang-en">Experience</span><span class="lang-es hidden">Experiencia</span>
+                            <span class="lang-gl">Experiencia</span><span class="lang-es hidden">Experiencia</span><span class="lang-en hidden">Experience</span>
                         </a>
                         <a href="#education" class="text-sm text-slate-300 hover:text-white transition-colors font-medium">
-                            <span class="lang-en">Education</span><span class="lang-es hidden">Educación</span>
+                            <span class="lang-gl">Educación</span><span class="lang-es hidden">Educación</span><span class="lang-en hidden">Education</span>
                         </a>
                         <a href="#training" class="text-sm text-slate-300 hover:text-white transition-colors font-medium">
-                            <span class="lang-en">Training</span><span class="lang-es hidden">Formación</span>
+                            <span class="lang-gl">Formación</span><span class="lang-es hidden">Formación</span><span class="lang-en hidden">Training</span>
                         </a>
                         <a href="#skills" class="text-sm text-slate-300 hover:text-white transition-colors font-medium">
-                            <span class="lang-en">Skills</span><span class="lang-es hidden">Aptitudes</span>
+                            <span class="lang-gl">Aptitudes</span><span class="lang-es hidden">Aptitudes</span><span class="lang-en hidden">Skills</span>
                         </a>
                     </div>
                     <div class="flex items-center space-x-3 border-l border-slate-700 pl-4 md:pl-6">
-                        <button onclick="changeLang('es')" id="btn-es" class="text-xl opacity-100 hover:opacity-100 transition-opacity grayscale-0" title="Español">
+                        <button onclick="changeLang('gl')" id="btn-gl" class="text-xl opacity-100 hover:opacity-100 transition-opacity" title="Galego">
+                            <img src="static/flag_gl.png" alt="Galego" class="w-5 h-4 rounded-sm inline-block align-middle">
+                        </button>
+                        <button onclick="changeLang('es')" id="btn-es" class="text-xl opacity-50 hover:opacity-100 transition-opacity grayscale hover:grayscale-0" title="Español">
                             <span class="fi fi-es rounded-sm"></span>
                         </button>
                         <button onclick="changeLang('en')" id="btn-en" class="text-xl opacity-50 hover:opacity-100 transition-opacity grayscale hover:grayscale-0" title="English">
@@ -66,18 +69,19 @@
                     Diego Otero Regueiro
                 </h1>
                 <p class="text-lg text-slate-300 font-medium mb-6">
-                    <span class="lang-en">Speech Therapist</span>
+                    <span class="lang-gl">Logopeda</span>
                     <span class="lang-es hidden">Logopeda</span>
+                    <span class="lang-en hidden">Speech Therapist</span>
                 </p>
 
                 <div class="flex flex-col sm:flex-row justify-center md:justify-start gap-3 mb-6">
                     <button onclick="copyObfuscatedData('diego.oregueiro', 'gmail.com', this)" class="bg-white text-slate-900 border border-transparent shadow-sm px-4 py-2 rounded-lg text-sm font-semibold hover:bg-slate-200 transition-colors flex items-center justify-center">
                         <i class="fa-solid fa-envelope mr-2 text-slate-600"></i>
-                        <span class="lang-en">Copy Email</span><span class="lang-es hidden">Copiar Email</span>
+                        <span class="lang-gl">Copiar Email</span><span class="lang-es hidden">Copiar Email</span><span class="lang-en hidden">Copy Email</span>
                     </button>
                     <button onclick="copyObfuscatedData('+34', '620853864', this)" class="bg-white text-slate-900 border border-transparent shadow-sm px-4 py-2 rounded-lg text-sm font-semibold hover:bg-slate-200 transition-colors flex items-center justify-center">
                         <i class="fa-solid fa-phone mr-2 text-slate-600"></i>
-                        <span class="lang-en">Copy Phone</span><span class="lang-es hidden">Copiar Teléfono</span>
+                        <span class="lang-gl">Copiar Teléfono</span><span class="lang-es hidden">Copiar Teléfono</span><span class="lang-en hidden">Copy Phone</span>
                     </button>
                     <a href="https://www.linkedin.com/in/diego-otero-regueiro" target="_blank" rel="noopener" class="bg-white text-slate-900 border border-transparent shadow-sm px-4 py-2 rounded-lg text-sm font-semibold hover:bg-slate-200 transition-colors flex items-center justify-center">
                         <i class="fa-brands fa-linkedin mr-2 text-slate-600"></i>
@@ -87,13 +91,16 @@
 
                 <div class="flex flex-wrap justify-center md:justify-start gap-2">
                     <span class="px-2.5 py-1 bg-slate-800 border border-slate-700 text-slate-300 rounded text-xs font-medium">
-                        <span class="lang-en">Spanish (Native)</span><span class="lang-es hidden">Castellano (Nativo)</span>
+                        <span class="lang-gl">Galego (Nativo)</span><span class="lang-es hidden">Gallego (Nativo)</span><span class="lang-en hidden">Galician (Native)</span>
                     </span>
                     <span class="px-2.5 py-1 bg-slate-800 border border-slate-700 text-slate-300 rounded text-xs font-medium">
-                        <span class="lang-en">Galician (Native)</span><span class="lang-es hidden">Gallego (Nativo)</span>
+                        <span class="lang-gl">Castelán (Nativo)</span><span class="lang-es hidden">Castellano (Nativo)</span><span class="lang-en hidden">Spanish (Native)</span>
                     </span>
                     <span class="px-2.5 py-1 bg-slate-800 border border-slate-700 text-slate-300 rounded text-xs font-medium">
-                        <span class="lang-en">Sign Language (A1)</span><span class="lang-es hidden">Lengua de Signos (A1)</span>
+                        <span class="lang-gl">Inglés (Conversacional)</span><span class="lang-es hidden">Inglés (Conversacional)</span><span class="lang-en hidden">English (Conversational)</span>
+                    </span>
+                    <span class="px-2.5 py-1 bg-slate-800 border border-slate-700 text-slate-300 rounded text-xs font-medium">
+                        <span class="lang-gl">Lingua de Signos (A1)</span><span class="lang-es hidden">Lengua de Signos (A1)</span><span class="lang-en hidden">Sign Language (A1)</span>
                     </span>
                 </div>
 
@@ -112,17 +119,18 @@
 
         <section id="about" class="mb-20">
             <h2 class="text-2xl font-bold text-slate-900 mb-6 border-b border-slate-200 pb-2">
-                <span class="lang-en">About Me</span><span class="lang-es hidden">Sobre Mí</span>
+                <span class="lang-gl">Sobre Min</span><span class="lang-es hidden">Sobre Mí</span><span class="lang-en hidden">About Me</span>
             </h2>
             <p class="text-slate-700 leading-relaxed">
-                <span class="lang-en">Speech Therapy graduate from the University of A Coruña (UDC), committed to continuous learning and driven by a clear vocation to improve people's quality of life. I consider myself an empathetic, responsible person with a strong ability to adapt. I enjoy working in teams and learning from different therapeutic approaches, with the goal of providing individualized and effective care. I am looking to continue my training and contribute my motivation and dedication in a professional environment where I can grow as a speech therapist.</span>
+                <span class="lang-gl">Graduado en Logopedia pola Universidade da Coruña (UDC), comprometido coa aprendizaxe continua e cunha vocación clara por mellorar a calidade de vida das persoas. Defínome como unha persoa empática, responsable e con gran capacidade de adaptación. Desfruto traballando en equipo e aprendendo de distintos enfoques terapéuticos, co obxectivo de ofrecer unha atención individualizada e eficaz. Busco seguir formándome e aportar a miña motivación e dedicación nun contorno profesional onde poida medrar como logopeda.</span>
                 <span class="lang-es hidden">Graduado en Logopedia por la Universidad de La Coruña (UDC), comprometido con el aprendizaje continuo y con una vocación clara por mejorar la calidad de vida de las personas. Me defino como una persona empática, responsable y con gran capacidad de adaptación. Disfruto trabajando en equipo y aprendiendo de distintos enfoques terapéuticos, con el objetivo de ofrecer una atención individualizada y eficaz. Busco seguir formándome y aportar mi motivación y dedicación en un entorno profesional donde pueda crecer como logopeda.</span>
+                <span class="lang-en hidden">Speech Therapy graduate from the University of A Coruña (UDC), committed to continuous learning and driven by a clear vocation to improve people's quality of life. I consider myself an empathetic, responsible person with a strong ability to adapt. I enjoy working in teams and learning from different therapeutic approaches, with the goal of providing individualized and effective care. I am looking to continue my training and contribute my motivation and dedication in a professional environment where I can grow as a speech therapist.</span>
             </p>
         </section>
 
         <section id="experience" class="mb-20">
             <h2 class="text-2xl font-bold text-slate-900 mb-8 border-b border-slate-200 pb-2">
-                <span class="lang-en">Professional Experience</span><span class="lang-es hidden">Experiencia Profesional</span>
+                <span class="lang-gl">Experiencia Profesional</span><span class="lang-es hidden">Experiencia Profesional</span><span class="lang-en hidden">Professional Experience</span>
             </h2>
 
             <div class="space-y-8">
@@ -132,17 +140,19 @@
                     </div>
                     <div>
                         <div class="flex items-center gap-4 mb-2">
-                            <div class="w-12 h-12 flex items-center justify-center bg-white rounded border border-slate-200 shadow-sm">
-                                <i class="fa-solid fa-hands-holding-child text-slate-600 text-xl"></i>
+                            <div class="w-12 h-12 flex items-center justify-center bg-white rounded border border-slate-200 shadow-sm p-1">
+                                <img src="static/logo_monica_vilamea.png" alt="Centro Mónica Vilameá" class="w-full h-full object-contain">
                             </div>
                             <h3 class="text-xl font-bold text-slate-900">
-                                <span class="lang-en">Speech Therapist (Internship)</span>
+                                <span class="lang-gl">Logopeda (Prácticas)</span>
                                 <span class="lang-es hidden">Logopeda (Prácticas)</span>
+                                <span class="lang-en hidden">Speech Therapist (Internship)</span>
                             </h3>
                         </div>
                         <p class="text-md text-slate-700 font-medium mb-2">
-                            <span class="lang-en">Early Intervention and Child Speech Therapy Centre Mónica Vilameá | A Coruña</span>
+                            <span class="lang-gl">Centro de Atención Temperá e Logopedia Infantil Mónica Vilameá | A Coruña</span>
                             <span class="lang-es hidden">Centro de Atención Temprana y Logopedia Infantil Mónica Vilameá | A Coruña</span>
+                            <span class="lang-en hidden">Early Intervention and Child Speech Therapy Centre Mónica Vilameá | A Coruña</span>
                         </p>
                     </div>
                 </div>
@@ -153,12 +163,13 @@
                     </div>
                     <div>
                         <div class="flex items-center gap-4 mb-2">
-                            <div class="w-12 h-12 flex items-center justify-center bg-white rounded border border-slate-200 shadow-sm">
-                                <i class="fa-solid fa-comments text-slate-600 text-xl"></i>
+                            <div class="w-12 h-12 flex items-center justify-center bg-white rounded border border-slate-200 shadow-sm p-1">
+                                <img src="static/logo_palabrea.png" alt="Palabrea Logopedia" class="w-full h-full object-contain">
                             </div>
                             <h3 class="text-xl font-bold text-slate-900">
-                                <span class="lang-en">Speech Therapist (Extracurricular Internship)</span>
+                                <span class="lang-gl">Logopeda (Prácticas Extracurriculares)</span>
                                 <span class="lang-es hidden">Logopeda (Prácticas Extracurriculares)</span>
+                                <span class="lang-en hidden">Speech Therapist (Extracurricular Internship)</span>
                             </h3>
                         </div>
                         <p class="text-md text-slate-700 font-medium mb-2">
@@ -173,12 +184,13 @@
                     </div>
                     <div>
                         <div class="flex items-center gap-4 mb-2">
-                            <div class="w-12 h-12 flex items-center justify-center bg-white rounded border border-slate-200 shadow-sm">
-                                <i class="fa-solid fa-microscope text-slate-600 text-xl"></i>
+                            <div class="w-12 h-12 flex items-center justify-center bg-white rounded border border-slate-200 shadow-sm p-1">
+                                <img src="static/logo_ribera_juan_cardona.png" alt="Hospital Ribera Juan Cardona" class="w-full h-full object-contain">
                             </div>
                             <h3 class="text-xl font-bold text-slate-900">
-                                <span class="lang-en">Clinical and Biomedical Laboratory Technician</span>
+                                <span class="lang-gl">Técnico de Laboratorio Clínico e Biomédico</span>
                                 <span class="lang-es hidden">Técnico de Laboratorio Clínico y Biomédico</span>
+                                <span class="lang-en hidden">Clinical and Biomedical Laboratory Technician</span>
                             </h3>
                         </div>
                         <p class="text-md text-slate-700 font-medium mb-2">
@@ -191,7 +203,7 @@
 
         <section id="education" class="mb-20">
             <h2 class="text-2xl font-bold text-slate-900 mb-8 border-b border-slate-200 pb-2">
-                <span class="lang-en">Education</span><span class="lang-es hidden">Educación</span>
+                <span class="lang-gl">Educación</span><span class="lang-es hidden">Educación</span><span class="lang-en hidden">Education</span>
             </h2>
 
             <div class="space-y-8">
@@ -201,17 +213,19 @@
                     </div>
                     <div>
                         <div class="flex items-center gap-4 mb-2">
-                            <div class="w-12 h-12 flex items-center justify-center bg-white rounded border border-slate-200 shadow-sm">
-                                <i class="fa-solid fa-graduation-cap text-slate-600 text-xl"></i>
+                            <div class="w-12 h-12 flex items-center justify-center bg-white rounded border border-slate-200 shadow-sm p-1">
+                                <img src="static/logo_udc.png" alt="UDC" class="w-full h-full object-contain">
                             </div>
                             <h3 class="text-lg font-bold text-slate-900">
-                                <span class="lang-en">Bachelor's Degree in Speech Therapy</span>
+                                <span class="lang-gl">Grao en Logopedia</span>
                                 <span class="lang-es hidden">Grado en Logopedia</span>
+                                <span class="lang-en hidden">Bachelor's Degree in Speech Therapy</span>
                             </h3>
                         </div>
                         <p class="text-md text-slate-700">
-                            <span class="lang-en">University of A Coruña (UDC)</span>
+                            <span class="lang-gl">Universidade da Coruña (UDC)</span>
                             <span class="lang-es hidden">Universidad de La Coruña (UDC)</span>
+                            <span class="lang-en hidden">University of A Coruña (UDC)</span>
                         </p>
                     </div>
                 </div>
@@ -222,18 +236,20 @@
                     </div>
                     <div>
                         <div class="flex items-center gap-4 mb-2">
-                            <div class="w-12 h-12 flex items-center justify-center bg-white rounded border border-slate-200 shadow-sm">
-                                <i class="fa-solid fa-flask text-slate-600 text-xl"></i>
+                            <div class="w-12 h-12 flex items-center justify-center bg-white rounded border border-slate-200 shadow-sm p-1">
+                                <img src="static/logo_ies_leixa.png" alt="IES Leixa" class="w-full h-full object-contain">
                             </div>
                             <h3 class="text-lg font-bold text-slate-900">
-                                <span class="lang-en">Higher Technical Degree in Clinical and Biomedical Laboratory</span>
+                                <span class="lang-gl">Ciclo Superior de Técnico de Laboratorio Clínico e Biomédico</span>
                                 <span class="lang-es hidden">Ciclo Superior de Técnico de Laboratorio Clínico y Biomédico</span>
+                                <span class="lang-en hidden">Higher Technical Degree in Clinical and Biomedical Laboratory</span>
                             </h3>
                         </div>
                         <p class="text-md text-slate-700 mb-1">I.E.S Leixa | Ferrol</p>
                         <p class="text-sm text-slate-600">
-                            <span class="lang-en">Internship at Hospital Ribera Juan Cardona.</span>
+                            <span class="lang-gl">Realización de prácticas no Hospital Ribera Juan Cardona.</span>
                             <span class="lang-es hidden">Realización de prácticas en el Hospital Ribera Juan Cardona.</span>
+                            <span class="lang-en hidden">Internship at Hospital Ribera Juan Cardona.</span>
                         </p>
                     </div>
                 </div>
@@ -244,12 +260,13 @@
                     </div>
                     <div>
                         <div class="flex items-center gap-4 mb-2">
-                            <div class="w-12 h-12 flex items-center justify-center bg-white rounded border border-slate-200 shadow-sm">
-                                <i class="fa-solid fa-book text-slate-600 text-xl"></i>
+                            <div class="w-12 h-12 flex items-center justify-center bg-white rounded border border-slate-200 shadow-sm p-1">
+                                <img src="static/logo_ies_marinas.png" alt="IES As Mariñas" class="w-full h-full object-contain">
                             </div>
                             <h3 class="text-lg font-bold text-slate-900">
-                                <span class="lang-en">Science Baccalaureate</span>
+                                <span class="lang-gl">Bacharelato de Ciencias</span>
                                 <span class="lang-es hidden">Bachillerato de Ciencias</span>
+                                <span class="lang-en hidden">Science Baccalaureate</span>
                             </h3>
                         </div>
                         <p class="text-md text-slate-700">I.E.S As Mariñas</p>
@@ -260,124 +277,137 @@
 
         <section id="training" class="mb-20">
             <h2 class="text-2xl font-bold text-slate-900 mb-8 border-b border-slate-200 pb-2">
-                <span class="lang-en">Complementary Training</span><span class="lang-es hidden">Formación Complementaria</span>
+                <span class="lang-gl">Formación Complementaria</span><span class="lang-es hidden">Formación Complementaria</span><span class="lang-en hidden">Complementary Training</span>
             </h2>
 
             <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
                 <div class="bg-white rounded-xl border border-slate-200 p-5 hover:shadow-lg hover:border-slate-300 hover:-translate-y-1 transform transition-all duration-300">
                     <div class="mb-3 flex flex-wrap gap-2 items-center">
                         <span class="px-2 py-0.5 rounded text-xs font-bold bg-slate-800 text-white">
-                            <span class="lang-en">Specialist</span><span class="lang-es hidden">Experto</span>
+                            <span class="lang-gl">Experto</span><span class="lang-es hidden">Experto</span><span class="lang-en hidden">Specialist</span>
                         </span>
                         <span class="text-xs text-slate-500 ml-auto">06/2024 - 10/2024</span>
                     </div>
                     <h3 class="text-base font-bold text-slate-900 mb-2">
-                        <span class="lang-en">Specialist in Attention Deficit Hyperactivity Disorder (ADHD)</span>
+                        <span class="lang-gl">Experto en Trastorno de Déficit de Atención con Hiperactividade (TDAH)</span>
                         <span class="lang-es hidden">Experto en Trastorno de Déficit de Atención con Hiperactividad (TDAH)</span>
+                        <span class="lang-en hidden">Specialist in Attention Deficit Hyperactivity Disorder (ADHD)</span>
                     </h3>
                     <p class="text-sm text-slate-600">
-                        <span class="lang-en">Higher Institute of Psychology and Education (ISPEDUC)</span>
+                        <span class="lang-gl">Instituto Superior de Psicoloxía e Educación (ISPEDUC)</span>
                         <span class="lang-es hidden">Instituto Superior de Psicología y Educación (ISPEDUC)</span>
+                        <span class="lang-en hidden">Higher Institute of Psychology and Education (ISPEDUC)</span>
                     </p>
                 </div>
 
                 <div class="bg-white rounded-xl border border-slate-200 p-5 hover:shadow-lg hover:border-slate-300 hover:-translate-y-1 transform transition-all duration-300">
                     <div class="mb-3 flex flex-wrap gap-2 items-center">
                         <span class="px-2 py-0.5 rounded text-xs font-bold bg-slate-800 text-white">
-                            <span class="lang-en">Technician</span><span class="lang-es hidden">Técnico</span>
+                            <span class="lang-gl">Técnico</span><span class="lang-es hidden">Técnico</span><span class="lang-en hidden">Technician</span>
                         </span>
                         <span class="text-xs text-slate-500 ml-auto">06/2023 - 08/2023</span>
                     </div>
                     <h3 class="text-base font-bold text-slate-900 mb-2">
-                        <span class="lang-en">Technician in Voice Rehabilitation</span>
+                        <span class="lang-gl">Técnico en Rehabilitación da Voz</span>
                         <span class="lang-es hidden">Técnico en Rehabilitación de la Voz</span>
+                        <span class="lang-en hidden">Technician in Voice Rehabilitation</span>
                     </h3>
                     <p class="text-sm text-slate-600">
-                        <span class="lang-en">Higher Institute of Psychology and Education (ISPEDUC)</span>
+                        <span class="lang-gl">Instituto Superior de Psicoloxía e Educación (ISPEDUC)</span>
                         <span class="lang-es hidden">Instituto Superior de Psicología y Educación (ISPEDUC)</span>
+                        <span class="lang-en hidden">Higher Institute of Psychology and Education (ISPEDUC)</span>
                     </p>
                 </div>
 
                 <div class="bg-white rounded-xl border border-slate-200 p-5 hover:shadow-lg hover:border-slate-300 hover:-translate-y-1 transform transition-all duration-300 md:col-span-2">
                     <div class="mb-3 flex flex-wrap gap-2 items-center">
                         <span class="px-2 py-0.5 rounded text-xs font-bold bg-slate-800 text-white">
-                            <span class="lang-en">Course</span><span class="lang-es hidden">Curso</span>
+                            <span class="lang-gl">Curso</span><span class="lang-es hidden">Curso</span><span class="lang-en hidden">Course</span>
                         </span>
                         <span class="text-xs text-slate-500 ml-auto">2023</span>
                     </div>
                     <h3 class="text-base font-bold text-slate-900 mb-2">
-                        <span class="lang-en">Comprehensive Approach to the Patient with Dysphagia</span>
+                        <span class="lang-gl">Abordaxe Integral do Paciente con Disfaxia</span>
                         <span class="lang-es hidden">Abordaje Integral del Paciente con Disfagia</span>
+                        <span class="lang-en hidden">Comprehensive Approach to the Patient with Dysphagia</span>
                     </h3>
                     <p class="text-sm text-slate-600">Medicarama</p>
                 </div>
             </div>
 
             <h3 class="text-xl font-bold text-slate-900 mt-12 mb-6">
-                <span class="lang-en">Workshops and Training Events</span><span class="lang-es hidden">Jornadas y Talleres Formativos</span>
+                <span class="lang-gl">Xornadas e Obradoiros Formativos</span><span class="lang-es hidden">Jornadas y Talleres Formativos</span><span class="lang-en hidden">Workshops and Training Events</span>
             </h3>
 
             <div class="space-y-4">
                 <div class="bg-white rounded-lg border border-slate-200 p-4 flex gap-4">
-                    <div class="flex-shrink-0 w-10 h-10 flex items-center justify-center bg-slate-100 rounded-full">
-                        <i class="fa-solid fa-users text-slate-600"></i>
+                    <div class="flex-shrink-0 w-10 h-10 flex items-center justify-center bg-white rounded-full border border-slate-200 shadow-sm overflow-hidden p-1">
+                        <img src="static/logo_gat.png" alt="GAT / AGAT" class="w-full h-full object-contain">
                     </div>
                     <div>
                         <h4 class="font-semibold text-slate-900">
-                            <span class="lang-en">XV Congress on Early Intervention and Parenting</span>
+                            <span class="lang-gl">XV Congreso sobre Atención Temperá e Crianza</span>
                             <span class="lang-es hidden">XV Congreso sobre Atención Temprana y Crianza</span>
+                            <span class="lang-en hidden">XV Congress on Early Intervention and Parenting</span>
                         </h4>
                         <p class="text-sm text-slate-600 mt-0.5">
-                            <span class="lang-en">Spanish Federation of Early Intervention Professional Associations (GAT) and Galician Association of Early Intervention (AGAT) · A Coruña</span>
+                            <span class="lang-gl">Federación Española de Asociacións de Profesionais de Atención Temperá (GAT) e Asociación Galega de Atención Temperá (AGAT) · A Coruña</span>
                             <span class="lang-es hidden">Federación Española de Asociaciones de Profesionales de Atención Temprana (GAT) y Asociación Galega de Atención Temperá (AGAT) · A Coruña</span>
+                            <span class="lang-en hidden">Spanish Federation of Early Intervention Professional Associations (GAT) and Galician Association of Early Intervention (AGAT) · A Coruña</span>
                         </p>
                     </div>
                 </div>
 
                 <div class="bg-white rounded-lg border border-slate-200 p-4 flex gap-4">
-                    <div class="flex-shrink-0 w-10 h-10 flex items-center justify-center bg-slate-100 rounded-full">
-                        <i class="fa-solid fa-comment-dots text-slate-600"></i>
+                    <div class="flex-shrink-0 w-10 h-10 flex items-center justify-center bg-white rounded-full border border-slate-200 shadow-sm overflow-hidden p-1">
+                        <img src="static/logo_julia_garcia.png" alt="Centro Julia García" class="w-full h-full object-contain">
                     </div>
                     <div>
                         <h4 class="font-semibold text-slate-900">
-                            <span class="lang-en">AAC and Autism Workshop</span>
+                            <span class="lang-gl">Obradoiro de CAA e Autismo</span>
                             <span class="lang-es hidden">Taller de CAA y Autismo</span>
+                            <span class="lang-en hidden">AAC and Autism Workshop</span>
                         </h4>
                         <p class="text-sm text-slate-600 mt-0.5">
-                            <span class="lang-en">Patricia Vázquez, Julia García Stimulation Centre · Vilagarcía de Arousa</span>
+                            <span class="lang-gl">Patricia Vázquez, Centro de Estimulación Julia García · Vilagarcía de Arousa</span>
                             <span class="lang-es hidden">Patricia Vázquez, Centro de Estimulación Julia García · Vilagarcía de Arousa</span>
+                            <span class="lang-en hidden">Patricia Vázquez, Julia García Stimulation Centre · Vilagarcía de Arousa</span>
                         </p>
                     </div>
                 </div>
 
                 <div class="bg-white rounded-lg border border-slate-200 p-4 flex gap-4">
-                    <div class="flex-shrink-0 w-10 h-10 flex items-center justify-center bg-slate-100 rounded-full">
-                        <i class="fa-solid fa-handshake-angle text-slate-600"></i>
+                    <div class="flex-shrink-0 w-10 h-10 flex items-center justify-center bg-white rounded-full border border-slate-200 shadow-sm overflow-hidden p-1">
+                        <img src="static/logo_cplga.png" alt="CPLGA" class="w-full h-full object-contain">
                     </div>
                     <div>
                         <h4 class="font-semibold text-slate-900">
-                            <span class="lang-en">Early Intervention, Everyone's Business</span>
+                            <span class="lang-gl">Atención Temperá, unha cousa de todos</span>
                             <span class="lang-es hidden">Congreso Atención Temperá, unha cousa de todos</span>
+                            <span class="lang-en hidden">Early Intervention, Everyone's Business</span>
                         </h4>
                         <p class="text-sm text-slate-600 mt-0.5">
-                            <span class="lang-en">Professional College of Speech Therapists of Galicia (CPLGA) · Santiago de Compostela</span>
+                            <span class="lang-gl">Colexio Profesional de Logopedistas de Galicia (CPLGA) · Santiago de Compostela</span>
                             <span class="lang-es hidden">Colexio Profesional de Logopedistas de Galicia (CPLGA) · Santiago de Compostela</span>
+                            <span class="lang-en hidden">Professional College of Speech Therapists of Galicia (CPLGA) · Santiago de Compostela</span>
                         </p>
                     </div>
                 </div>
 
                 <div class="bg-white rounded-lg border border-slate-200 p-4 flex gap-4">
-                    <div class="flex-shrink-0 w-10 h-10 flex items-center justify-center bg-slate-100 rounded-full">
-                        <i class="fa-solid fa-heart text-slate-600"></i>
+                    <div class="flex-shrink-0 w-10 h-10 flex items-center justify-center bg-white rounded-full border border-slate-200 shadow-sm overflow-hidden p-1">
+                        <img src="static/logo_fundacion_bata.png" alt="Fundación Bata" class="w-full h-full object-contain">
                     </div>
                     <div>
                         <h4 class="font-semibold text-slate-900">
-                            <span class="lang-en">Positive Behavioural Support</span>
+                            <span class="lang-gl">Apoio Condutual Positivo</span>
                             <span class="lang-es hidden">Apoyo Conductual Positivo</span>
+                            <span class="lang-en hidden">Positive Behavioural Support</span>
                         </h4>
                         <p class="text-sm text-slate-600 mt-0.5">
-                            <span class="lang-en">Carmen Vázquez López (Fundación Bata) · Vilagarcía de Arousa</span>
+                            <span class="lang-gl">Carmen Vázquez López (Fundación Bata) · Vilagarcía de Arousa</span>
                             <span class="lang-es hidden">Carmen Vázquez López (Fundación Bata) · Vilagarcía de Arousa</span>
+                            <span class="lang-en hidden">Carmen Vázquez López (Fundación Bata) · Vilagarcía de Arousa</span>
                         </p>
                     </div>
                 </div>
@@ -386,7 +416,7 @@
 
         <section id="skills" class="mb-8">
             <h2 class="text-2xl font-bold text-slate-900 mb-8 border-b border-slate-200 pb-2">
-                <span class="lang-en">Skills</span><span class="lang-es hidden">Aptitudes</span>
+                <span class="lang-gl">Aptitudes</span><span class="lang-es hidden">Aptitudes</span><span class="lang-en hidden">Skills</span>
             </h2>
 
             <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
@@ -396,11 +426,10 @@
                     </div>
                     <div>
                         <p class="font-semibold text-slate-900 text-sm">
-                            <span class="lang-en">Teamwork</span><span class="lang-es hidden">Trabajo en equipo</span>
+                            <span class="lang-gl">Traballo en equipo</span><span class="lang-es hidden">Trabajo en equipo</span><span class="lang-en hidden">Teamwork</span>
                         </p>
                         <p class="text-xs text-slate-600">
-                            <span class="lang-en">Interdisciplinary coordination</span>
-                            <span class="lang-es hidden">Coordinación con equipo interdisciplinar</span>
+                            <span class="lang-gl">Coordinación con equipo interdisciplinar</span><span class="lang-es hidden">Coordinación con equipo interdisciplinar</span><span class="lang-en hidden">Interdisciplinary coordination</span>
                         </p>
                     </div>
                 </div>
@@ -410,7 +439,7 @@
                         <i class="fa-solid fa-heart-pulse text-slate-700"></i>
                     </div>
                     <p class="font-semibold text-slate-900 text-sm">
-                        <span class="lang-en">Emotional Intelligence</span><span class="lang-es hidden">Inteligencia emocional</span>
+                        <span class="lang-gl">Intelixencia emocional</span><span class="lang-es hidden">Inteligencia emocional</span><span class="lang-en hidden">Emotional Intelligence</span>
                     </p>
                 </div>
 
@@ -419,7 +448,7 @@
                         <i class="fa-solid fa-arrows-rotate text-slate-700"></i>
                     </div>
                     <p class="font-semibold text-slate-900 text-sm">
-                        <span class="lang-en">Adaptability</span><span class="lang-es hidden">Capacidad de adaptación</span>
+                        <span class="lang-gl">Capacidade de adaptación</span><span class="lang-es hidden">Capacidad de adaptación</span><span class="lang-en hidden">Adaptability</span>
                     </p>
                 </div>
 
@@ -428,7 +457,7 @@
                         <i class="fa-solid fa-brain text-slate-700"></i>
                     </div>
                     <p class="font-semibold text-slate-900 text-sm">
-                        <span class="lang-en">Critical Thinking</span><span class="lang-es hidden">Pensamiento crítico</span>
+                        <span class="lang-gl">Pensamento crítico</span><span class="lang-es hidden">Pensamiento crítico</span><span class="lang-en hidden">Critical Thinking</span>
                     </p>
                 </div>
 
@@ -437,7 +466,7 @@
                         <i class="fa-solid fa-clipboard-check text-slate-700"></i>
                     </div>
                     <p class="font-semibold text-slate-900 text-sm">
-                        <span class="lang-en">Responsibility</span><span class="lang-es hidden">Responsabilidad</span>
+                        <span class="lang-gl">Responsabilidade</span><span class="lang-es hidden">Responsabilidad</span><span class="lang-en hidden">Responsibility</span>
                     </p>
                 </div>
 
@@ -446,7 +475,7 @@
                         <i class="fa-solid fa-hands-holding-circle text-slate-700"></i>
                     </div>
                     <p class="font-semibold text-slate-900 text-sm">
-                        <span class="lang-en">Empathy</span><span class="lang-es hidden">Empatía</span>
+                        <span class="lang-gl">Empatía</span><span class="lang-es hidden">Empatía</span><span class="lang-en hidden">Empathy</span>
                     </p>
                 </div>
             </div>

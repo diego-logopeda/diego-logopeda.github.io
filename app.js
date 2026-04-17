@@ -1,39 +1,40 @@
 // ====== GESTIÓN DE IDIOMA ======
 function changeLang(lang) {
-    const enElements = document.querySelectorAll('.lang-en');
+    const glElements = document.querySelectorAll('.lang-gl');
     const esElements = document.querySelectorAll('.lang-es');
-    const btnEn = document.getElementById('btn-en');
+    const enElements = document.querySelectorAll('.lang-en');
+    const btnGl = document.getElementById('btn-gl');
     const btnEs = document.getElementById('btn-es');
+    const btnEn = document.getElementById('btn-en');
 
-    if (lang === 'es') {
-        enElements.forEach(el => el.classList.add('hidden'));
+    // Ocultar todos
+    glElements.forEach(el => el.classList.add('hidden'));
+    esElements.forEach(el => el.classList.add('hidden'));
+    enElements.forEach(el => el.classList.add('hidden'));
+
+    // Desactivar todos los botones
+    [btnGl, btnEs, btnEn].forEach(btn => {
+        btn.classList.remove('opacity-100', 'grayscale-0');
+        btn.classList.add('opacity-50', 'grayscale');
+    });
+
+    // Mostrar idioma seleccionado y activar su botón
+    if (lang === 'gl') {
+        glElements.forEach(el => el.classList.remove('hidden'));
+        btnGl.classList.remove('opacity-50', 'grayscale');
+        btnGl.classList.add('opacity-100', 'grayscale-0');
+    } else if (lang === 'es') {
         esElements.forEach(el => el.classList.remove('hidden'));
-
         btnEs.classList.remove('opacity-50', 'grayscale');
         btnEs.classList.add('opacity-100', 'grayscale-0');
-        btnEn.classList.remove('opacity-100', 'grayscale-0');
-        btnEn.classList.add('opacity-50', 'grayscale');
-
-        document.documentElement.lang = 'es';
-
     } else {
-        esElements.forEach(el => el.classList.add('hidden'));
         enElements.forEach(el => el.classList.remove('hidden'));
-
         btnEn.classList.remove('opacity-50', 'grayscale');
         btnEn.classList.add('opacity-100', 'grayscale-0');
-        btnEs.classList.remove('opacity-100', 'grayscale-0');
-        btnEs.classList.add('opacity-50', 'grayscale');
-
-        document.documentElement.lang = 'en';
     }
+
+    document.documentElement.lang = lang;
 }
-
-
-// ====== INICIALIZACIÓN ======
-// Por defecto, la web se muestra en español (coincide con el HTML inicial:
-// la clase 'hidden' está en los .lang-en). No se hace nada al cargar,
-// pero si se quisiera forzar un idioma, se haría aquí.
 
 
 // ====== COPIAR EMAIL / TELÉFONO ======
@@ -81,8 +82,9 @@ function showCopied(button) {
 
     const originalHTML = button.innerHTML;
 
-    const isEs = document.documentElement.lang === 'es';
-    const copiedText = isEs ? 'Copiado' : 'Copied';
+    const lang = document.documentElement.lang;
+    let copiedText = 'Copiado';
+    if (lang === 'en') copiedText = 'Copied';
 
     button.innerHTML = `<i class="fa-solid fa-check mr-2"></i> ${copiedText}`;
 
