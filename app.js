@@ -122,6 +122,51 @@ function loadVideo(container, videoId) {
     container.appendChild(iframe);
 }
 
+function extraerIdVideo(enlace) {
+    var match = enlace.match(/(?:youtu\.be\/|youtube\.com\/(?:shorts\/|watch\?v=|embed\/))([a-zA-Z0-9_-]+)/);
+    return match ? match[1] : null;
+}
+
+function generarVideos() {
+    var grid = document.getElementById('videos-grid');
+    var canalDiv = document.getElementById('canal-link');
+    if (!grid || typeof MIS_VIDEOS === 'undefined') return;
+
+    MIS_VIDEOS.forEach(function(v) {
+        var id = extraerIdVideo(v.enlace);
+        if (!id) return;
+
+        var isShort = v.tipo === 'short';
+        var label = isShort ? 'Short' : 'Video';
+        var aspectClass = isShort ? 'aspect-[9/16] max-w-[280px] mx-auto' : 'aspect-video';
+
+        var wrapper = document.createElement('div');
+        wrapper.innerHTML =
+            '<span class="inline-block px-2 py-0.5 rounded text-xs font-bold bg-red-600 text-white mb-3">' + label + '</span>' +
+            '<div class="' + aspectClass + ' rounded-lg overflow-hidden border border-slate-700 shadow-lg relative cursor-pointer group" onclick="loadVideo(this, \'' + id + '\')">' +
+                '<img src="https://img.youtube.com/vi/' + id + '/maxresdefault.jpg" alt="' + label + '" class="w-full h-full object-cover">' +
+                '<div class="absolute inset-0 flex items-center justify-center bg-black/30 group-hover:bg-black/40 transition-colors">' +
+                    '<div class="w-16 h-11 bg-red-600 rounded-xl flex items-center justify-center group-hover:bg-red-700 transition-colors">' +
+                        '<i class="fa-solid fa-play text-white text-lg ml-1"></i>' +
+                    '</div>' +
+                '</div>' +
+            '</div>';
+        grid.appendChild(wrapper);
+    });
+
+    if (typeof MI_CANAL !== 'undefined' && MI_CANAL) {
+        var lang = document.documentElement.lang;
+        var texto = lang === 'en' ? 'View full channel' : 'Ver canle completa';
+        if (lang === 'es') texto = 'Ver canal completo';
+        canalDiv.innerHTML =
+            '<a href="' + MI_CANAL + '" target="_blank" rel="noopener" class="inline-flex items-center gap-2 bg-red-600 hover:bg-red-700 text-white px-5 py-2.5 rounded-lg text-sm font-semibold transition-colors">' +
+                '<i class="fa-brands fa-youtube"></i> ' + texto +
+            '</a>';
+    }
+}
+
+document.addEventListener('DOMContentLoaded', generarVideos);
+
 
 // ====== FEEDBACK VISUAL ======
 function showCopied(button) {
