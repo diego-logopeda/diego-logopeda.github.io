@@ -77,6 +77,27 @@ function copyToClipboard(text, button) {
 }
 
 
+// ====== MENÚ MÓVIL ======
+function toggleMobileMenu() {
+    const menu = document.getElementById('mobile-menu');
+    const btn = document.getElementById('mobile-menu-btn');
+    menu.classList.toggle('hidden');
+    const icon = btn.querySelector('i');
+    if (menu.classList.contains('hidden')) {
+        icon.className = 'fa-solid fa-bars text-xl';
+    } else {
+        icon.className = 'fa-solid fa-xmark text-xl';
+    }
+}
+
+function closeMobileMenu() {
+    const menu = document.getElementById('mobile-menu');
+    const btn = document.getElementById('mobile-menu-btn');
+    menu.classList.add('hidden');
+    btn.querySelector('i').className = 'fa-solid fa-bars text-xl';
+}
+
+
 // ====== SECCIÓN VIDEOS ======
 function toggleVideos(event) {
     event.preventDefault();
