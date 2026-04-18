@@ -45,6 +45,10 @@
                         <a href="#skills" class="text-sm text-slate-300 hover:text-white transition-colors font-medium">
                             <span class="lang-gl">Aptitudes</span><span class="lang-es hidden">Aptitudes</span><span class="lang-en hidden">Skills</span>
                         </a>
+                        <a href="#" onclick="toggleVideos(event)" class="text-sm text-slate-300 hover:text-white transition-colors font-medium flex items-center gap-1.5">
+                            <i class="fa-brands fa-youtube text-red-500"></i>
+                            <span class="lang-gl">Recursos</span><span class="lang-es hidden">Recursos</span><span class="lang-en hidden">Resources</span>
+                        </a>
                     </div>
                     <div class="flex items-center space-x-3 border-l border-slate-700 pl-4 md:pl-6">
                         <button onclick="changeLang('gl')" id="btn-gl" class="opacity-100 hover:opacity-100 transition-opacity" title="Galego">
@@ -121,7 +125,7 @@
             <h2 class="text-2xl font-bold text-slate-900 mb-6 border-b border-slate-200 pb-2">
                 <span class="lang-gl">Sobre Min</span><span class="lang-es hidden">Sobre Mí</span><span class="lang-en hidden">About Me</span>
             </h2>
-            <p class="text-slate-700 leading-relaxed">
+            <p class="text-slate-700 leading-relaxed text-justify">
                 <span class="lang-gl">Graduado en Logopedia pola Universidade da Coruña (UDC). Tiven a oportunidade de traballar en centros clínicos, onde colaborei na avaliación e intervención de nenos con diferentes trastornos da linguaxe e a comunicación. Considérome unha persoa responsable, con vocación por axudar e moitas ganas de seguir aprendendo e mellorando como profesional.</span>
                 <span class="lang-es hidden">Graduado en Logopedia por la Universidad de La Coruña (UDC). He tenido la oportunidad de trabajar en centros clínicos, donde he colaborado en la evaluación e intervención de niños con diferentes trastornos del lenguaje y la comunicación. Me considero una persona responsable, con vocación por ayudar y muchas ganas de seguir aprendiendo y mejorando como profesional.</span>
                 <span class="lang-en hidden">Speech Therapy graduate from the University of A Coruña (UDC). I have had the opportunity to work in clinical centres, where I have collaborated in the assessment and intervention of children with different language and communication disorders. I consider myself a responsible person, with a vocation for helping others and a strong desire to keep learning and improving as a professional.</span>
@@ -497,8 +501,8 @@
                 </div>
 
                 <div class="bg-white rounded-lg border border-slate-200 p-4 flex gap-4">
-                    <div class="flex-shrink-0 w-10 h-10 flex items-center justify-center bg-slate-100 rounded-full">
-                        <i class="fa-solid fa-puzzle-piece text-slate-600"></i>
+                    <div class="flex-shrink-0 w-10 h-10 flex items-center justify-center bg-white rounded-full border border-slate-200 shadow-sm overflow-hidden p-1">
+                        <img src="static/logo_engloba.jpeg" alt="Centro Engloba" class="w-full h-full object-contain">
                     </div>
                     <div>
                         <h4 class="font-semibold text-slate-900">
@@ -511,8 +515,8 @@
                 </div>
 
                 <div class="bg-white rounded-lg border border-slate-200 p-4 flex gap-4">
-                    <div class="flex-shrink-0 w-10 h-10 flex items-center justify-center bg-slate-100 rounded-full">
-                        <i class="fa-solid fa-child-reaching text-slate-600"></i>
+                    <div class="flex-shrink-0 w-10 h-10 flex items-center justify-center bg-white rounded-full border border-slate-200 shadow-sm overflow-hidden p-1">
+                        <img src="static/logo_tajibo.png" alt="Asociación Tajibo" class="w-full h-full object-contain">
                     </div>
                     <div>
                         <h4 class="font-semibold text-slate-900">
@@ -606,6 +610,42 @@
                 </div>
             </div>
         </section>
+    </div>
+
+    <div id="videos-section" class="hidden">
+        <div class="bg-slate-900 border-t border-slate-800">
+            <div class="max-w-5xl mx-auto px-6 lg:px-8 py-16">
+                <div class="flex items-center justify-between mb-8">
+                    <h2 class="text-2xl font-bold text-white border-b border-slate-700 pb-2 flex items-center gap-3">
+                        <i class="fa-brands fa-youtube text-red-500"></i>
+                        <span class="lang-gl">Recursos en YouTube</span><span class="lang-es hidden">Recursos en YouTube</span><span class="lang-en hidden">YouTube Resources</span>
+                    </h2>
+                    <button onclick="toggleVideos(event)" class="text-slate-400 hover:text-white transition-colors text-sm flex items-center gap-1">
+                        <i class="fa-solid fa-xmark text-lg"></i>
+                    </button>
+                </div>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-8 items-start">
+                    <div>
+                        <span class="inline-block px-2 py-0.5 rounded text-xs font-bold bg-red-600 text-white mb-3">Video</span>
+                        <div class="aspect-video rounded-lg overflow-hidden border border-slate-700 shadow-lg">
+                            <iframe class="w-full h-full" src="https://www.youtube.com/embed/8wIRAIGCunk" title="Video" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                        </div>
+                    </div>
+                    <div>
+                        <span class="inline-block px-2 py-0.5 rounded text-xs font-bold bg-red-600 text-white mb-3">Short</span>
+                        <div class="aspect-[9/16] max-w-[280px] mx-auto rounded-lg overflow-hidden border border-slate-700 shadow-lg">
+                            <iframe class="w-full h-full" src="https://www.youtube.com/embed/xwl19CGoQhw" title="Short" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                        </div>
+                    </div>
+                </div>
+                <div class="text-center mt-8">
+                    <a href="https://www.youtube.com/@diegootero" target="_blank" rel="noopener" class="inline-flex items-center gap-2 bg-red-600 hover:bg-red-700 text-white px-5 py-2.5 rounded-lg text-sm font-semibold transition-colors">
+                        <i class="fa-brands fa-youtube"></i>
+                        <span class="lang-gl">Ver canle completa</span><span class="lang-es hidden">Ver canal completo</span><span class="lang-en hidden">View full channel</span>
+                    </a>
+                </div>
+            </div>
+        </div>
     </div>
 
     <footer class="border-t border-slate-200 py-6 mt-4">

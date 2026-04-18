@@ -77,6 +77,17 @@ function copyToClipboard(text, button) {
 }
 
 
+// ====== SECCIÓN VIDEOS ======
+function toggleVideos(event) {
+    event.preventDefault();
+    const section = document.getElementById('videos-section');
+    section.classList.toggle('hidden');
+    if (!section.classList.contains('hidden')) {
+        section.scrollIntoView({ behavior: 'smooth' });
+    }
+}
+
+
 // ====== FEEDBACK VISUAL ======
 function showCopied(button) {
 
