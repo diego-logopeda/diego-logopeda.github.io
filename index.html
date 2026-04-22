@@ -28,7 +28,7 @@ var MIS_VIDEOS = [
     // { enlace: "https://youtu.be/XXXXXXXXX", tipo: "video" },
 ];
 
-var MI_CANAL = " ";
+var MI_CANAL = "https://www.youtube.com/channel/UCcA9NBXcLm57FPEyqmvWk8A";
 </script>
 
 <html lang="gl" class="scroll-smooth">
@@ -158,8 +158,11 @@ var MI_CANAL = " ";
                     <span class="px-2.5 py-1 bg-slate-800 border border-slate-700 text-slate-300 rounded text-xs font-medium">
                         <span class="lang-gl">Inglés (Conversacional)</span><span class="lang-es hidden">Inglés (Conversacional)</span><span class="lang-en hidden">English (Conversational)</span>
                     </span>
-                    <span class="px-2.5 py-1 bg-slate-800 border border-slate-700 text-slate-300 rounded text-xs font-medium">
+                    <span class="px-2.5 py-1 bg-slate-800 border border-slate-700 text-slate-300 rounded text-xs font-medium inline-flex items-center gap-1.5">
                         <span class="lang-gl">Lingua de Signos (A1)</span><span class="lang-es hidden">Lengua de Signos (A1)</span><span class="lang-en hidden">Sign Language (A1)</span>
+                        <a href="static/A1%20lengua%20de%20signos.pdf" target="_blank" rel="noopener" class="text-red-400 hover:text-red-300 transition-colors" title="Ver certificado">
+                            <i class="fa-solid fa-file-pdf"></i>
+                        </a>
                     </span>
                 </div>
 
@@ -362,6 +365,20 @@ var MI_CANAL = " ";
             </div>
         </section>
 
+        <!--
+        ╔══════════════════════════════════════════════════════════════════╗
+        ║  CERTIFICADOS PDF                                                ║
+        ║                                                                  ║
+        ║  Para que apareza un botón "Ver certificado" nunha tarxeta,      ║
+        ║  engade o atributo data-pdf="static/nome_do_arquivo.pdf"         ║
+        ║  no <div> exterior da tarxeta correspondente.                    ║
+        ║                                                                  ║
+        ║  Exemplo:                                                        ║
+        ║  <div class="bg-white rounded-xl ..." data-pdf="static/cert.pdf">║
+        ║                                                                  ║
+        ║  O botón aparecerá automáticamente e abrirá o PDF noutra pestana.║
+        ╚══════════════════════════════════════════════════════════════════╝
+        -->
         <section id="training" class="mb-20">
             <h2 class="text-2xl font-bold text-slate-900 mb-8 border-b border-slate-200 pb-2">
                 <span class="lang-gl">Formación Complementaria</span><span class="lang-es hidden">Formación Complementaria</span><span class="lang-en hidden">Complementary Training</span>
@@ -435,19 +452,6 @@ var MI_CANAL = " ";
                     <p class="text-sm text-slate-600">Medicarama</p>
                 </div>
 
-                <div class="bg-white rounded-xl border border-slate-200 p-5 hover:shadow-lg hover:border-slate-300 hover:-translate-y-1 transform transition-all duration-300">
-                    <div class="mb-3 flex flex-wrap gap-2 items-center">
-                        <span class="px-2 py-0.5 rounded text-xs font-bold bg-slate-800 text-white">
-                            <span class="lang-gl">Curso</span><span class="lang-es hidden">Curso</span><span class="lang-en hidden">Course</span>
-                        </span>
-                    </div>
-                    <h3 class="text-base font-bold text-slate-900 mb-2">
-                        <span class="lang-gl">Intelixencia aplicada á logopedia</span>
-                        <span class="lang-es hidden">Inteligencia aplicada a la logopedia</span>
-                        <span class="lang-en hidden">Intelligence Applied to Speech Therapy</span>
-                    </h3>
-                    <p class="text-sm text-slate-600">ECNPL</p>
-                </div>
             </div>
 
             <h3 class="text-xl font-bold text-slate-900 mt-12 mb-6">
@@ -596,6 +600,20 @@ var MI_CANAL = " ";
                         <p class="text-sm text-slate-600 mt-0.5">Patricia Vázquez Rodríguez, Centro Julia García</p>
                     </div>
                 </div>
+
+                <div class="bg-white rounded-lg border border-slate-200 p-4 flex gap-4">
+                    <div class="flex-shrink-0 w-10 h-10 flex items-center justify-center bg-white rounded-full border border-slate-200 shadow-sm overflow-hidden p-1">
+                        <i class="fa-solid fa-microchip text-slate-600 text-lg"></i>
+                    </div>
+                    <div>
+                        <h4 class="font-semibold text-slate-900">
+                            <span class="lang-gl">Intelixencia Artificial aplicada á Logopedia</span>
+                            <span class="lang-es hidden">Inteligencia Artificial aplicada a la Logopedia</span>
+                            <span class="lang-en hidden">Artificial Intelligence Applied to Speech Therapy</span>
+                        </h4>
+                        <p class="text-sm text-slate-600 mt-0.5">ECNPL</p>
+                    </div>
+                </div>
             </div>
         </section>
 
@@ -639,10 +657,10 @@ var MI_CANAL = " ";
 
                 <div class="bg-white rounded-lg border border-slate-200 p-4 flex items-center gap-3">
                     <div class="w-10 h-10 flex items-center justify-center bg-slate-100 rounded-full flex-shrink-0">
-                        <i class="fa-solid fa-brain text-slate-700"></i>
+                        <i class="fa-solid fa-ear-listen text-slate-700"></i>
                     </div>
                     <p class="font-semibold text-slate-900 text-sm">
-                        <span class="lang-gl">Pensamento crítico</span><span class="lang-es hidden">Pensamiento crítico</span><span class="lang-en hidden">Critical Thinking</span>
+                        <span class="lang-gl">Escoita activa</span><span class="lang-es hidden">Escucha activa</span><span class="lang-en hidden">Active Listening</span>
                     </p>
                 </div>
 

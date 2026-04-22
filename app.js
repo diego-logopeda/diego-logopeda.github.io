@@ -168,6 +168,35 @@ function generarVideos() {
 document.addEventListener('DOMContentLoaded', generarVideos);
 
 
+// ====== BOTÓN PARA ABRIR CERTIFICADO PDF ======
+// Cualquier tarjeta con atributo data-pdf="static/archivo.pdf" mostrará
+// automáticamente un botoncito que abre el PDF en otra pestaña.
+function injectPdfButtons() {
+    document.querySelectorAll('[data-pdf]').forEach(function(card) {
+        var pdfPath = card.getAttribute('data-pdf');
+        if (!pdfPath || card.querySelector('.pdf-cert-btn')) return;
+
+        var a = document.createElement('a');
+        a.href = pdfPath;
+        a.target = '_blank';
+        a.rel = 'noopener';
+        a.className = 'pdf-cert-btn mt-3 inline-flex items-center gap-1.5 px-2.5 py-1 rounded-md bg-slate-100 hover:bg-slate-200 text-slate-700 text-xs font-semibold border border-slate-200 transition-colors';
+        a.innerHTML =
+            '<i class="fa-solid fa-file-pdf text-red-500"></i>' +
+            '<span class="lang-gl">Ver certificado</span>' +
+            '<span class="lang-es hidden">Ver certificado</span>' +
+            '<span class="lang-en hidden">View certificate</span>';
+
+        // En tarxetas con layout flex (obradoiros), engadir dentro do bloque de contido,
+        // non como flex item ao lado do logo.
+        var target = card.classList.contains('flex') ? card.lastElementChild : card;
+        target.appendChild(a);
+    });
+}
+
+document.addEventListener('DOMContentLoaded', injectPdfButtons);
+
+
 // ====== FEEDBACK VISUAL ======
 function showCopied(button) {
 
